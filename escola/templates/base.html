@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>{% block title%} Area do Aluno {% endblock %}</title>
+{% load static %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href= {% static 'css\PagStyle.css' %} rel="stylesheet" type="text/css">
+<link href= {% static 'css\stilosHome.css' %} rel="stylesheet" type="text/css">
+<link href= {% static 'css\conteudoCurso.css' %} rel="stylesheet" type="text/css">
+<link href= {% static 'css\novo.css' %} rel="stylesheet" type="text/css">
+<link href= {% static 'css\StyloB.css' %} rel="stylesheet" type="text/css">
+
+<link rel="icon"  href= {% static 'images/logoico.ico' %} type="image/x-icon"/>
+
+
+</head>
+
+<body>
+<div class="mainWrapper">
+  <header> 
+    <!-- HEADER -->
+    <div class="logo"> 
+		
+		<!-- LOGO --> 
+		<a href="index.html"><img src= {% static 'images/logo.png' %} alt="logo">  </a>
+    </div>
+    <div class="headerLinks"><a href="#" title="Login"><img src= {% static 'images/login_in-512.png' %} alt="Login"></a></div>
+	  <!-- <div class="headerLinksInf"><a href="#" title="teste"><h4>Torne seu Futuro mais colorido</h4></a></div> -->
+
+  </header>
+  <section class="offer"> 
+    <!-- Espaço para banner -->
+    <article>
+      <h2>LMS Advanced</h2>
+    </article>
+    <article>
+      <div class="Perfil">
+        <img src= {% static 'images/UserImg.png' %} alt="Foto Usuario">
+        <p>{Nome do Aluno}</p>
+        <p>{Curso que faz e semestre}</p>
+      </div>
+    </article>
+    <!-- <p>Descubra o Futuro</p> -->
+  </section>
+	
+  <!--DIV PRINCIPAL DO CONTEUDO-->
+  <div class="content">
+	  <!--MENU LATERAL -->
+    <section class="sidebar">       
+      <div class="menubar">
+        <nav class="menu">
+          <h2>Disciplinas </h2>
+          <hr>
+          <ul>
+            <li><a href="disciplina.html" title="Link">Disciplina</a></li>
+            <li><a href="lstcursos.html" title="Link">Lista de cursos</a></li>
+            <li><a href="#" title="Link">Detalhe do curso</a></li>
+            <li ><a href="noticias.html"  title="Link">Noticias</a></li>
+            <li><a href="calndehora.html" title="Link">Calendário e Horários</a></li>
+          </ul>
+        </nav>
+        <nav class="menu">
+          <h2>Atividades Continuas</h2>
+          <hr>
+          <ul>
+            <li><a href="#" title="Link">Atividades Continuas</a></li>
+            <li><a href="#" title="Link">Boletim</a></li>
+            <li><a href="#" title="Link">Feedbak's</a></li>
+            <li class="notimp"><!--  A classe notimp é aplicada para remover este link das visualizações de tablet e telefone--><a href="#" title="Link">Link 4</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+	  <!--FIM DO MENU-->
+
+	  <!-- CONTEUDO DO SITE -->
+    <section class="mainContent">
+        {% block container %} {% endblock %}
+    </section>
+	  <!--FIM DO CONTEUDO -->
+  </div>
+	
+<footer> 
+    <!-- FOOTER -->
+    <div class="">
+        <article class="">
+          <h3>Contatos:</h3>
+          <h3>Secretaria: (11) 5593-5390<br>
+
+              Financeiro: (11) 5593-5397 ou (11) 5593-5392<br>
+              
+              Biblioteca: (11) 5593-5347<br>
+              
+              Recepção: (11) 5593-5344</h3>
+        </article>
+        <article class="">
+          <a href="https://www.facebook.com/FacImpacta/"><img src={% static 'images/facebookIcon.png' %} alt="Facebook"></a>
+          <a href="https://www.instagram.com/faculdadeimpacta/"><img src= {% static 'images/InstagramIcon.png' %} alt="Instragram"></a>
+          <a href="https://www.youtube.com/user/GrupoImpacta/featured"><img src= {% static 'images/YouTubeIcon.png' %} alt="Youtube"></a>
+        </article>
+    </div>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block title %}
+   {{block.super}}
+{% endblock %}
+{% block container %}  
+	  <!-- CONTEUDO DO SITE -->
+  <section class="mainContent">
+      
+        <table class="tabela" style="width:100%">
+            <tr>
+              <th>DICIPLINA</th>
+              <th>NOTAS</th> 
+              <th>FALTAS</th>
+            </tr>
+            <tr>
+              <td>TEC WEB</td>
+              <td>10</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>LINGUAGEM SQL</td>
+              <td>9</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>ENGENHARIA DE SOFTWARE</td>
+              <td>7</td>
+              <td>0</td>
+            </tr>
+            <tr>
+                <td>LOGICA DE PROGRAMAÇÃO</td>
+                <td>7</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                  <td>LINGUAGEM DE PROGRAMAÇÃO</td>
+                  <td>10</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                    <td>LIBRAS</td>
+                    <td>10</td>
+                    <td>0</td>
+                  </tr>
+          </table>
+    </section>
+	  <!--FIM DO CONTEUDO -->
+{% endblock %}
